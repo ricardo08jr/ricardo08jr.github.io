@@ -7,7 +7,10 @@ import ExperienceTimeline from "./components/ExperienceTimeline";
 import ProjectsBlock from "./components/ProjectsBlock";
 import ContactBlock from "./components/ContactBlock";
 import SiteFooter from "./components/SiteFooter";
-
+import EducationSection from "./components/EducationSection";
+import DefaultImage from "./assets/no-image-available.jpg"
+import education from "./data/education";
+import certification from "./data/certification";
 export default function App() {
   useEffect(() => {
     document.body.classList.add("page-loaded");
@@ -37,6 +40,18 @@ export default function App() {
         <AboutSection />
         <ProjectsBlock />
         <ExperienceTimeline />
+         <EducationSection
+         id="certification"
+            title="Certificações"
+            education={certification}
+            defaultImage={DefaultImage}
+          />
+         <EducationSection
+         id="education"
+        title="Formação Acadêmica"
+        education={education}
+        defaultImage= {DefaultImage}
+      />
         <SkillsBlock />
         <ContactBlock />
       </main>

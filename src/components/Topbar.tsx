@@ -32,10 +32,11 @@ export default function Topbar() {
           <nav className={`navlinks ${open ? "open" : ""}`}>
             <a href="#intro">Início</a>
             <a href="#about">Sobre</a>
+            <a href="#projects">Projetos</a>
             <a href="#experience">Experiência</a>
+            <a href="#certification">Certificações</a>
             <a href="#education">Educação</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projetos</a>
             <a href="#contact">Contato</a>
           </nav>
 

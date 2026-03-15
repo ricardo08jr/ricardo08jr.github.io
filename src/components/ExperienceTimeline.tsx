@@ -1,4 +1,4 @@
-import { FaBriefcase, FaGraduationCap, FaReact, FaPython, FaPhp } from "react-icons/fa";
+import { FaBriefcase, FaReact, FaPython, FaPhp } from "react-icons/fa";
 import { 
   SiPostgresql, 
   SiTypescript, 
@@ -13,18 +13,10 @@ import {
 
 
 } from "react-icons/si";
-import DesignPattern from "../assets/CourseraDesignPatterns.png"
-import ObjectOriented from "../assets/CourseraObjectOrientedDesign.png"
 
 
-type EducationItem = {
-  title: string;
-  org: string;
-  period: string;
-  certificateImage?: string;
-  certificateAlt?: string;
-  learned?: string
-};
+
+
 
 const EXPERIENCES = [
   {
@@ -88,41 +80,6 @@ funcionalidades, entregando manutenção corretiva e evolutiva em ambiente com m
   }
 ];
 
-const EDUCATION: EducationItem[] = [
-  {
-    title: "Design Pattern",
-    org: "University of Alberta",
-    period: "2026",
-    learned:
-      "Segundo curso da especialização em Software Design & Architecture, focado em Design Patterns, princípios SOLID e Code Smells, com ênfase em estruturar sistemas orientados a objetos de forma modular e sustentável."
-    ,certificateImage: DesignPattern,
-    certificateAlt: "Certificado "
-  },
-  {
-    title: "Object-Oriented Design",
-    org: "University of Alberta",
-    period: "2026",
-    learned:
-      "Curso focado em design orientado a objetos, modelagem com UML e técnicas de análise como User Stories e CRC Cards, enfatizando a importância de entender as regras de negócio antes da implementação."
-    ,certificateImage: ObjectOriented,
-    certificateAlt: "Certificado "
-  },
-  {
-    title: "Ensino Médio com Habilitação Técnica em Desenvolvimento de Sistemas",
-    org: "Etec Aristóteles Ferreira",
-    period: "2022 - 2024",
-    learned:
-      `Durante 3 anos no Ensino Médio Técnico em Desenvolvimento de Sistemas, aprofundei lógica de programação e desenvolvi projetos com C#, ASP.NET, HTML, CSS, JavaScript, além de WinForms, UML, redes, segurança e criptografia.`
-  },
-  {
-    title: "Análise e Desenvolvimento de Sistemas (Noturno)",
-    org: "Fatec Rubens Lara “Santos”",
-    period: "2025 - 2027",
-    learned:
-      `Atualmente cursando o 3º ciclo da graduação em Análise e Desenvolvimento de Sistemas, aprofundando conhecimentos em engenharia de software, arquitetura de sistemas e desenvolvimento de aplicações.`
-  }
-  
-];
 
 export default function ExperienceTimeline() {
   return (
@@ -162,32 +119,6 @@ export default function ExperienceTimeline() {
         </div>
       </section>
 
-      <section id="education" className="experience-section reveal">
-        <div className="container">
-          <h2 className="section-title resume-title">
-            <FaGraduationCap aria-hidden="true" /> Minha Formação
-          </h2>
-
-          <div className="education-grid">
-            {EDUCATION.map((item) => (
-              <article key={`${item.title}-${item.period}`} className="education-card reveal">
-                <p className="education-period">{item.period}</p>
-                {item.certificateImage && (
-                  <img
-                    className="education-certificate"
-                    src={item.certificateImage}
-                    alt={item.certificateAlt ?? `Certificado do curso ${item.title}`}
-                    loading="lazy"
-                  />
-                )}
-                <h3>{item.title}</h3>
-                <p>{item.org}</p>
-                <p className="education-learned">{item.learned}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

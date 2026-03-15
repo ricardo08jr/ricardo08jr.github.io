@@ -18,3 +18,12 @@ export type Testimonial = {
   text: string;
   avatar?: string;
 };
+
+export type EducationItem = {
+  title: string;
+  org: string;
+  period: string;
+  certificateImage?: string;
+  certificateAlt?: string;
+  learned?: string;
+};
