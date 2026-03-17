@@ -1,6 +1,6 @@
 
 import { useTranslation } from "react-i18next";
-
+import { FaGlobe } from "react-icons/fa";
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
 
   return (
     <button onClick={toggle} className="lang-btn">
-      🌍
+      <FaGlobe size={20} />
     </button>
   );
 }

@@ -1,4 +1,11 @@
 {
+    "modal":{
+        "details": "Details"
+    },
+    "buttons":{
+        "demo": "View Demo",
+        "repo": "View Repository"
+    },
     "menu": {
         "start": "Start",
         "about": "About",
