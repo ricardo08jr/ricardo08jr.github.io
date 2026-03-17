@@ -1,4 +1,31 @@
 {
+    "skills":{
+        "title": "My Skills"
+    },
+    "contact": {
+        "title": "Contact",
+        "placeHolders": {
+        "completeName": "Full Name *",
+        "email": "Email *",
+        "phone": "Phone",
+        "subject": "Subject *",
+        "message": "Message *"
+        },
+        "button": {
+        "send": "Send Message"
+        },
+        "info": {
+            "title": "Information",
+            "emailLabel": "Email",
+            "whatsapp": "WhatsApp",
+            "location": "Location",
+            "links": {
+                "linkedin": "LinkedIn",
+                "github": "GitHub"
+            }
+        }
+    }
+    ,
     "modal":{
         "details": "Details"
     },
@@ -103,5 +130,9 @@
       "title": "Systems Analysis and Development (Evening Program)",
       "learned": "Currently attending the 3rd cycle of the Systems Analysis and Development degree, furthering knowledge in software engineering, system architecture, and application development."
     }
+  },
+   "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Made with ReactJS"
   }
 }

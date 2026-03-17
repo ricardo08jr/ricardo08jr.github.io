@@ -2,7 +2,7 @@ import { FaGithub, FaJava, FaNodeJs, FaPhp, FaPython, FaReact } from "react-icon
 import type { CSSProperties } from "react";
 import { SiMysql, SiPostgresql, SiRedis, SiTypescript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
-
+import { useTranslation } from "react-i18next";
 const SKILLS = [
   { name: "C#", icon: <TbBrandCSharp />, color: "#512bd4" },
   { name: "Java", icon: <FaJava />, color: "#f89820" },
@@ -18,10 +18,11 @@ const SKILLS = [
 ];
 
 export default function SkillsBlock() {
+  const { t } = useTranslation();
   return (
     <section className="skills-section reveal" id="skills">
       <div className="container">
-        <h3 className="section-title center">Minhas Habilidades</h3>
+        <h3 className="section-title center">{t("skills.title")}</h3>
         <p className="section-sub center skills-sub">
           
         </p>

@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
 export default function ContactBlock() {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -26,7 +28,7 @@ export default function ContactBlock() {
   return (
     <section id="contact" className="contact-section reveal">
       <div className="container">
-        <h2 className="section-title">Contato</h2>
+        <h2 className="section-title">{t("contact.title")}</h2>
 
         <div className="contact-grid">
           <form
@@ -36,16 +38,16 @@ export default function ContactBlock() {
             }}
             className="contact-form reveal"
           >
-            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nome completo *" required />
-            <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email *" type="email" required />
-            <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Telefone" />
-            <input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="Assunto *" required />
-            <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Mensagem *" rows={6} required />
-            <button type="submit" className="btn-primary">Enviar Mensagem</button>
+            <input value={name} onChange={(e) => setName(e.target.value)} placeholder={t("contact.placeHolders.completeName")} required />
+            <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t("contact.placeHolders.email")} type="email" required />
+            <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={t("contact.placeHolders.phone")} />
+            <input value={subject} onChange={(e) => setSubject(e.target.value)} placeholder={t("contact.placeHolders.subject")} required />
+            <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder={t("contact.placeHolders.message")} rows={6} required />
+            <button type="submit" className="btn-primary">{t("contact.button.send")}</button>
           </form>
 
           <aside className="contact-info reveal">
-            <h3>Informações</h3>
+            <h3>{t("contact.info.title")}</h3>
             <p><strong>Email:</strong> ricardo08jr@hotmail.com</p>
             <p><strong>WhatsApp:</strong> +55 (13) 98865-4001</p>
             <p><strong>Local:</strong> Santos, SP - Brasil</p>

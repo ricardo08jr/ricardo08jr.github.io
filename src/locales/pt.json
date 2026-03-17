@@ -1,4 +1,30 @@
 {
+  "skills":{
+    "title": "Minhas Habilidades"
+  },
+  "contact": {
+    "title": "Contato",
+    "placeHolders": {
+      "completeName": "Nome completo *",
+      "email": "Email *",
+      "phone": "Telefone",
+      "subject": "Assunto *",
+      "message": "Mensagem *"
+    },
+    "button": {
+      "send": "Enviar Mensagem"
+    },
+    "info": {
+      "title": "Informações",
+      "emailLabel": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Local",
+      "links": {
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+      }
+    }
+  },
   "modal":{
         "details": "Detalhes"
   },
@@ -103,5 +129,9 @@
       "title": "Análise e Desenvolvimento de Sistemas (Noturno)",
       "learned": "Atualmente cursando o 3º ciclo da graduação em Análise e Desenvolvimento de Sistemas, aprofundando conhecimentos em engenharia de software, arquitetura de sistemas e desenvolvimento de aplicações."
     }
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "madeWith": "Feito com ReactJS"
   }
 }
