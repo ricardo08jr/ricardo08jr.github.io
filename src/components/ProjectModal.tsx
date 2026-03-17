@@ -1,13 +1,14 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import type { Project } from "../types";
-
+import { useTranslation } from "react-i18next";
 type Props = {
   project: Project | null;
   onClose: () => void;
 };
 
 export default function ProjectModal({ project, onClose }: Props) {
+  const { t } = useTranslation();
   const overlayRef = useRef<HTMLDivElement | null>(null);
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const previouslyFocusedRef = useRef<HTMLElement | null>(null);
@@ -172,7 +173,7 @@ export default function ProjectModal({ project, onClose }: Props) {
       </div>
     );
   };
-
+  
   return createPortal(
     <div
       className="modal-overlay"
@@ -189,7 +190,7 @@ export default function ProjectModal({ project, onClose }: Props) {
         tabIndex={-1}
       >
         <div className="modal-header">
-          <h3>{project.title}</h3>
+          <h3>{t(project.title as any)}</h3>
           <button aria-label="Fechar modal" className="modal-close" onClick={onClose}>
             ✕
           </button>
@@ -200,19 +201,19 @@ export default function ProjectModal({ project, onClose }: Props) {
 
           <div className="modal-details">
             <div className="modal-details-body">
-                <p className="modal-description">{project.description}</p>
+                <p className="modal-description">{t(project.description as any)}</p>
 
                 {project.details && (
                   <>
                     <h4>Detalhes</h4>
-                    <div className="modal-longtext">{project.details}</div>
+                    <div className="modal-longtext">{t(project.details as any)}</div>
                   </>
                 )}
             </div>
             <div className="modal-tags">
-              {(project.tech ?? []).map((t) => (
-                <span className="tag" key={t}>
-                  {t}
+              {(project.tech ?? []).map((te) => (
+                <span className="tag" key={t(te as any)}>
+                  {t(te as any)}
                 </span>
               ))}
             </div>
@@ -220,12 +221,12 @@ export default function ProjectModal({ project, onClose }: Props) {
             <div className="modal-actions">
               {project.demo && (
                 <a className="btn btn-outline" href={project.demo} target="_blank" rel="noreferrer">
-                  Ver Demo
+                 {t("buttons.demo")}
                 </a>
               )}
               {project.repo && (
                 <a className="btn btn-primary" href={project.repo} target="_blank" rel="noreferrer">
-                  Ver Repositório
+                  {t("buttons.repo")}
                 </a>
               )}
             </div>

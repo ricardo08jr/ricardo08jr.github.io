@@ -4,13 +4,14 @@ import type { Project } from "../types";
 import ProjectModal from "./ProjectModal";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import DefaultImage from "../assets/no-image-available.jpg"
+import { useTranslation } from "react-i18next";
 export default function ProjectsBlock() {
   const [selected, setSelected] = useState<Project | null>(null);
-
+  const { t } = useTranslation();
   return (
     <section id="projects" className="projects-section reveal">
       <div className="container">
-        <h2 className="section-title">Projetos</h2>
+        <h2 className="section-title">{t("projects.title")}</h2>
 
         <div className="projects-grid">
           {projects.map((p) => (
@@ -25,23 +26,23 @@ export default function ProjectsBlock() {
                 }
               }}
               role="button"
-              aria-label={`Abrir detalhes do projeto ${p.title}`}
+              aria-label={`Abrir detalhes do projeto ${t(p.title as any)}`}
             >
               <div className="project-media">
                 <img src={p.image || DefaultImage} alt={p.title} />
               </div>
 
               <div className="project-info">
-                <h4>{p.title}</h4>
-                {p.description.split("\n").map((linha, index) => (
+                <h4>{t(p.title as any)}</h4>
+                {String(t(p.description as any)).split("\n").map((linha, index) => (
                        <p key={index}>{linha}</p>
                  ))}
 
                 <div className="project-footer">
                   <div className="tags">
-                    {p.tech?.map((t) => (
-                      <span className="tag" key={t}>
-                        {t}
+                    {p.tech?.map((te) => (
+                      <span className="tag" key={t(te as any)}>
+                        {t(te as any)}
                       </span>
                     ))}
                   </div>

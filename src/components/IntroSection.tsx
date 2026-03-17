@@ -1,24 +1,24 @@
 import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import Perfil from "../assets/perfil-removebg-preview.png";
-import Curriculo from "../assets/cv-ricardo-junior.pdf"
+import { useTranslation } from "react-i18next";
 export default function IntroSection() {
+  const { t } = useTranslation();
   return (
     <section id="intro" className="intro-section reveal">
       <div className="container">
         <div className="intro-grid">
           <div className="intro-left">
-            <p className="lead">Olá, eu sou</p>
-            <h1 className="hero-name">Ricardo Júnior</h1>
-            <p className="hero-role">Desenvolvedor Fullstack • Desenvolvedor Backend</p>
+            <p className="lead">{t("intro.greeting")}</p>
+            <h1 className="hero-name">{t("intro.name")}</h1>
+            <p className="hero-role">{t("intro.roles")}</p>
 
             <p className="hero-desc">
-              Desenvolvo aplicações web com foco em arquitetura limpa, performance e experiência do usuário.
-              Transformo ideias em produtos.
+              {t("intro.description")}
             </p>
 
             <div className="actions">
               <a className="btn-primary" href="#projects">
-                Ver projetos
+                {t("intro.buttons.projects")}
               </a>
               <a
                 className="btn-outline"
@@ -26,10 +26,10 @@ export default function IntroSection() {
                 target="_blank"
                 rel="noreferrer"
               >
-                WhatsApp
+                {t("intro.buttons.whatsapp")}
               </a>
-              <a className="btn-outline" href={Curriculo} download>
-                <FaDownload /> Download CV
+              <a className="btn-outline" href={t("intro.buttons.path-cv")} download>
+                <FaDownload /> {t("intro.buttons.cv")}
               </a>
 
               <a

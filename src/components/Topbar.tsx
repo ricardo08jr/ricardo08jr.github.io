@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
+import LanguageSwitcher from "./LanguageSwitcher";
 import FavIcon from "../assets/favicon.png"
+import { useTranslation } from "react-i18next";
 export default function Topbar() {
   const [open, setOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,7 +21,7 @@ export default function Topbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
+  const { t } = useTranslation();
   return (
     <>
       <header className={`topbar ${isScrolled ? "topbar--stuck" : ""}`}>
@@ -30,17 +32,18 @@ export default function Topbar() {
           </div>
 
           <nav className={`navlinks ${open ? "open" : ""}`}>
-            <a href="#intro">Início</a>
-            <a href="#about">Sobre</a>
-            <a href="#projects">Projetos</a>
-            <a href="#experience">Experiência</a>
-            <a href="#certification">Certificações</a>
-            <a href="#education">Educação</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contato</a>
+            <a href="#intro">{t("menu.start")}</a>
+            <a href="#about">{t("menu.about")}</a>
+            <a href="#projects">{t("menu.projects")}</a>
+            <a href="#experience">{t("menu.experience")}</a>
+            <a href="#certification">{t("menu.certifications")}</a>
+            <a href="#education">{t("menu.education")}</a>
+            <a href="#skills">{t("menu.skills")}</a>
+            <a href="#contact">{t("menu.contact")}</a>
           </nav>
 
           <div className="controls">
+            <LanguageSwitcher/>
             <button className="menu-btn" onClick={() => setOpen((s) => !s)}>
               ☰
             </button>

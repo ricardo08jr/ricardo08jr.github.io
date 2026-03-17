@@ -13,25 +13,18 @@ import {
 
 
 } from "react-icons/si";
-
+import { useTranslation } from "react-i18next";
 
 
 
 
 const EXPERIENCES = [
   {
-    title: "Analista Desenvolvedor — Sistema Jurídico",
-    org: "Freelancer contratado por projeto",
-    period: "Out 2025 — Atual",
+    title: "experience.freelancer.role",
+    org: "experience.freelancer.type",
+    period: "experience.freelancer.period",
     description:
-      `Nessa experiência, analisei e desenvolvi uma RESTful API para um produto jurídico utilizando Python e FastApi,
-estruturada em arquitetura em camadas e orientada a eventos. O sistema foi containerizado com Docker para garantir
-ambientes reprodutíveis e padronização entre desenvolvimento, testes e deploy. Modelei fluxos Event-Driven (EDA)
-utilizando Redis para mensageria e implementei o padrão Outbox para assegurar entrega confiável de eventos. Em
-partes críticas do domínio, defini estratégias de retry e dead-letter. Automatizei o ciclo de entrega com pipelines de CI
-via GitHub Actions, incluindo execução de testes unitários e de integração (inclusive fluxos assíncronos com Pytest).
-Mantive foco constante em qualidade, cobertura de testes e documentação técnica, com participação ativa junto ao
-cliente.`,
+      `experience.freelancer.description`,
     technologies: [
       {name: "Python", icon:FaPython},
       { name: "PostgreSQL", icon: SiPostgresql },
@@ -43,16 +36,11 @@ cliente.`,
     ]
   },
   {
-    title: "Desenvolvedor de Software ",
-    org: "Daoster",
-    period: "Mar 2025 - Atual",
+    title: "experience.daoster.role",
+    org: "experience.daoster.company",
+    period: "experience.daoster.period",
     description:
-      `Desenvolvi aplicação web full-stack com php com experiência na integração do motor de templates Smarty e forte
-atuação em front-end (HTML, CSS, JavaScript). Analisei sistemas pré-existentes, mapeando fluxos entre back e front, e
-projetei/implementei o backend completo com foco em manutenibilidade, boas práticas e resolução de problemas
-reais. Realizei modelagem e otimização de banco de dados MySQL, deploy e administração de servidores via cPanel,
-além de integrações com APIs. Atuei no atendimento direto ao cliente, levantamento de requisitos e definição de
-funcionalidades, entregando manutenção corretiva e evolutiva em ambiente com metodologias ágeis`,
+      `experience.daoster.description`,
     technologies: [
       {name: "PHP", icon:FaPhp},
       { name: "MySQL", icon: SiMysql },
@@ -64,30 +52,28 @@ funcionalidades, entregando manutenção corretiva e evolutiva em ambiente com m
     ]
   },
   {
-    title: "Monitoria de Estudos de Matemática",
-    org: "Etec Aristóteles Ferreira",
-    period: "2022",
+    title: "experience.teaching.role",
+    org: "experience.teaching.company",
+    period: "experience.teaching.period",
     description:
-      `Liderei um grupo de estudos e atuei como monitor de Matemática para turmas do ensino médio. Planejei trilhas
-      semanais, produzi listas de exercícios e simulados, corrigi atividades e ofereci atendimento individual para reforço de
-      conteúdos. Facilitei encontros ao vivo, acompanhei a evolução dos alunos com indicadores simples de desempenho e
-      ajustei a metodologia conforme feedbacks, promovendo participação, autonomia e melhor preparo para provas.`,
+      `experience.teaching.description`,
     technologies: [
-      { name: "Comunicação didática", icon: null },
-      { name: "Liderança de grupos", icon: null },
-      { name: "Planejamento de aulas", icon: null }
+      { name: "experience.teaching.techs.didacticCommunication", icon: null },
+      { name: "experience.teaching.techs.leadershipGroup", icon: null },
+      { name: "experience.teaching.techs.lessonPlanning", icon: null }
     ]
   }
 ];
 
 
 export default function ExperienceTimeline() {
+  const { t } = useTranslation();
   return (
     <>
       <section id="experience" className="experience-section reveal">
         <div className="container">
           <h2 className="section-title resume-title">
-            <FaBriefcase aria-hidden="true" /> Minha Experiência
+            <FaBriefcase aria-hidden="true" /> {t("experience.title")}
           </h2>
 
           <div className="experience-timeline">
@@ -95,10 +81,10 @@ export default function ExperienceTimeline() {
               <article key={`${item.title}-${item.period}`} className="experience-item reveal">
                 <span className="experience-dot" aria-hidden="true" />
                 <div className="experience-content">
-                  <p className="experience-period">{item.period}</p>
-                  <h3>{item.title}</h3>
-                  <p className="experience-org">{item.org}</p>
-                  <p className="experience-description">{item.description}</p>
+                  <p className="experience-period">{t(item.period as any)}</p>
+                  <h3>{t(item.title as any)}</h3>
+                  <p className="experience-org">{t(item.org as any)}</p>
+                  <p className="experience-description">{t(item.description as any)}</p>
 
                   <div className="experience-tech" aria-label={`Tecnologias usadas em ${item.title}`}>
                     {item.technologies.map((tech) => {
@@ -107,7 +93,7 @@ export default function ExperienceTimeline() {
                       return (
                         <span key={tech.name} className="experience-tech-item" title={tech.name}>
                           {Icon && <Icon aria-hidden="true" />}
-                          <small>{tech.name}</small>
+                          <small>{t(tech.name as any)}</small>
                         </span>
                       );
                     })}

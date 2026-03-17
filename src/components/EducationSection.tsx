@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGraduationCap } from "react-icons/fa";
 import type { EducationItem } from "../types";
-
+import { useTranslation } from "react-i18next";
 type EducationSectionProps = {
     id: string;
   title?: string;
@@ -19,6 +19,7 @@ export default function EducationSection({
   defaultImage = null,
   className = "",
 }: EducationSectionProps) {
+  const { t } = useTranslation();
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     if (defaultImage && e.currentTarget.src !== defaultImage) {
       e.currentTarget.src = defaultImage;
@@ -29,7 +30,7 @@ export default function EducationSection({
     <section id={id} className={`experience-section reveal ${className}`}>
       <div className="container">
         <h2 className="section-title resume-title">
-          <Icon aria-hidden="true" /> {title}
+          <Icon aria-hidden="true" /> {t(title as any)}
         </h2>
 
         <div className="education-grid">
@@ -47,9 +48,9 @@ export default function EducationSection({
                 />
               )}
 
-              <h3>{item.title}</h3>
-              <p>{item.org}</p>
-              <p className="education-learned">{item.learned}</p>
+              <h3>{t(item.title as any)}</h3>
+              <p>{t(item.org as any)}</p>
+              <p className="education-learned">{t(item.learned as any)}</p>
             </article>
           ))}
         </div>
