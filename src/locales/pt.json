@@ -1,0 +1,100 @@
+{
+  "menu": {
+    "start": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "certifications": "Certificações",
+    "education": "Educação",
+    "skills": "Skills",
+    "contact": "Contato"
+  },
+  "intro": {
+    "greeting": "Olá, eu sou",
+    "name": "Ricardo Júnior",
+    "roles": "Desenvolvedor Fullstack • Desenvolvedor Backend",
+    "description": "Desenvolvo aplicações web com foco em arquitetura limpa, performance e experiência do usuário. Transformo ideias em produtos.",
+    "buttons": {
+      "projects": "Ver projetos",
+      "whatsapp": "WhatsApp",
+      "cv": "Download CV"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Sou um desenvolvedor de software de 19 anos, morador de Santos (SP), com 4 anos de prática em programação e 1 ano e 3 meses de experiência profissional. Apaixonado por resolver problemas e aprender novas tecnologias, busco oportunidades para continuar crescendo na área de tecnologia com foco em boas práticas como DDD, TDD e arquitetura limpa.",
+    "stats": {
+      "years": "Anos",
+      "technologies": "Tecnologias"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "restaurant": {
+      "title": "Gerenciador de Restaurante",
+      "description": "Sistema de gerenciamento para restaurantes desenvolvido como projeto de conclusão de curso (TCC), com controle de estoque, comandas, gerenciamento de funcionários e estatísticas do negócio.",
+      "details": "Para a constituição do projeto, foram utilizadas as linguagens de programação C# ASP.net, Ionic Angular, JavaScript, TypeScript, MySQL WorkBench, além das linguagens de marcação HTML 5 e CSS, para a construção e estruturação visual da interface e da ferramenta Figma para a criação do Design e Logotipo."
+    },
+    "kingOfMath": {
+      "title": "King of Math | Enigma e Lógica",
+      "description": "O King of Math é um jogo mobile para Android que desafia os jogadores a reconhecer padrões, resolver enigmas e enfrentar quebra-cabeças matemáticos de diferentes níveis. Disponível na Google Play Store com classificação livre, o jogo foi criado para que pessoas de todas as idades possam exercitar a lógica e desenvolver raciocínio de forma divertida e descontraída.",
+      "details": "Meu maior propósito sempre foi estimular o raciocínio lógico e a resolução de problemas. O projeto começou no Ensino Médio com amigos, evoluindo de uma brincadeira para algo com grande potencial, utilizando tecnologias e APIs para melhorar o jogo. ",
+      "downloads": "+500 Downloads"
+    },
+    "loanManager": {
+      "title": "Gerenciador de Itens Emprestado",
+      "description": "A ideia do aplicativo é permitir que usuários registrem objetos que podem ser emprestados, gerenciem contatos e acompanhem itens emprestados ou disponíveis.",
+      "details": "Este projeto começou como um projeto de estudo mais simples, mas foi evoluindo conforme eu aprendia novos conceitos de arquitetura e padrões de projeto. \n O principal objetivo do projeto é praticar desenvolvimento orientado a objetos e padrões de design em Java."
+    }
+  },
+  "experience": {
+    "title": "Minha Experiência",
+    "freelancer": {
+      "period": "Out 2025 — Atual",
+      "role": "Analista Desenvolvedor — Sistema Jurídico",
+      "type": "Freelancer contratado por projeto",
+      "description": "Nessa experiência, analisei e desenvolvi uma RESTful API para um produto jurídico utilizando Python e FastApi, estruturada em arquitetura em camadas e orientada a eventos. O sistema foi containerizado com Docker para garantir ambientes reprodutíveis e padronização entre desenvolvimento, testes e deploy. Modelei fluxos Event-Driven (EDA) utilizando Redis para mensageria e implementei o padrão Outbox para assegurar entrega confiável de eventos. Em partes críticas do domínio, defini estratégias de retry e dead-letter. Automatizei o ciclo de entrega com pipelines de CI via GitHub Actions, incluindo execução de testes unitários e de integração (inclusive fluxos assíncronos com Pytest). Mantive foco constante em qualidade, cobertura de testes e documentação técnica, com participação ativa junto ao cliente."
+    },
+    "daoster": {
+      "period": "Mar 2025 - Atual",
+      "role": "Desenvolvedor de Software",
+      "company": "Daoster",
+      "description": "Desenvolvi aplicação web full-stack com PHP com experiência na integração do motor de templates Smarty e forte atuação em front-end (HTML, CSS, JavaScript). Analisei sistemas pré-existentes, mapeando fluxos entre back e front, e projetei/implementei o backend completo com foco em manutenibilidade, boas práticas e resolução de problemas reais. Realizei modelagem e otimização de banco de dados MySQL, deploy e administração de servidores via cPanel, além de integrações com APIs. Atuei no atendimento direto ao cliente, levantamento de requisitos e definição de funcionalidades, entregando manutenção corretiva e evolutiva em ambiente com metodologias ágeis."
+    },
+    "teaching": {
+      "period": "2022",
+      "role": "Monitoria de Estudos de Matemática",
+      "company": "Etec Aristóteles Ferreira",
+      "description": "Liderei um grupo de estudos e atuei como monitor de Matemática para turmas do ensino médio. Planejei trilhas semanais, produzi listas de exercícios e simulados, corrigi atividades e ofereci atendimento individual para reforço de conteúdos. Facilitei encontros ao vivo, acompanhei a evolução dos alunos com indicadores simples de desempenho e ajustei a metodologia conforme feedbacks, promovendo participação, autonomia e melhor preparo para provas.",
+      "techs":{
+        "lessonPlanning" : "Planejamento de aulas",
+        "leadershipGroup": "Liderança de grupos",
+        "didacticCommunication": "Comunicação didática"
+      }
+    }
+  },
+  "cert": {
+    "title": "Certificações",
+    "university": "University of Alberta",
+    "alt": "Certificado",
+    "designPattern": {
+      "title": "Design Pattern",
+      "learned": "Segundo curso da especialização em Software Design & Architecture, focado em Design Patterns, princípios SOLID e Code Smells, com ênfase em estruturar sistemas orientados a objetos de forma modular e sustentável."
+    },
+    "ood": {
+      "title": "Object-Oriented Design",
+      "learned": "Curso focado em design orientado a objetos, modelagem com UML e técnicas de análise como User Stories e CRC Cards, enfatizando a importância de entender as regras de negócio antes da implementação."
+    }
+  },
+  "education": {
+    "title": "Formação Acadêmica",
+    "highschool": {
+      "title": "Ensino Médio com Habilitação Técnica em Desenvolvimento de Sistemas",
+      "learned": "Durante 3 anos no Ensino Médio Técnico em Desenvolvimento de Sistemas, aprofundei lógica de programação e desenvolvi projetos com C#, ASP.NET, HTML, CSS, JavaScript, além de WinForms, UML, redes, segurança e criptografia."
+    },
+    "college": {
+      "title": "Análise e Desenvolvimento de Sistemas (Noturno)",
+      "learned": "Atualmente cursando o 3º ciclo da graduação em Análise e Desenvolvimento de Sistemas, aprofundando conhecimentos em engenharia de software, arquitetura de sistemas e desenvolvimento de aplicações."
+    }
+  }
+}

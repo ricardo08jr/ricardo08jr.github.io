@@ -4,36 +4,33 @@ import WebEstoque from "../assets/webEstoque.jpg"
 const projects: Project[] = [
   {
     id: "p1",
-    title: "Gerenciador de Restaurante",
-    description: `Sistema de gerenciamento para restaurantes desenvolvido como projeto de conclusão de curso (TCC), com controle de estoque, comandas, gerenciamento de funcionários e estatísticas do negócio.\n
-    Para a constituição do projeto, foram utilizadas as linguagens de programação C# ASP.net, Ionic Angular, JavaScript, TypeScript, MySQL WorkBench, além das linguagens de marcação HTML 5 e CSS, para a construção e estruturação visual da interface e da ferramenta Figma para a criação do Design e Logotipo.`,
+    title: "projects.restaurant.title",
+    description: `projects.restaurant.description`,
     image: WebEstoque,
     tech: [ "C# ASP.NET", "MySQL","Ionic Angular", "TypeScript"],
     video: "https://youtu.be/7jo9zVUW0-0",
     repo: "https://github.com/ricardo08jr/restaurant-management-system?tab=readme-ov-file#sum%C3%A1rio",
-    details: "O projeto foi dividido em três sistemas principais: Sistema Web de Gerenciamento do Restaurante, Aplicação Web para a Cozinha, Aplicativo Mobile "
+    details: "projects.restaurant.details"
   },
   {
     id: "p2",
-    title: "King of Math | Enigma e Lógica",
-    description: `O King of Math é um jogo mobile para Android que desafia os jogadores a reconhecer padrões, resolver enigmas e enfrentar quebra-cabeças matemáticos de diferentes níveis. Disponível na Google Play Store com classificação livre, o jogo foi criado para que pessoas de todas as idades possam exercitar a lógica e desenvolver raciocínio de forma divertida e descontraída.`,
+    title: "projects.kingOfMath.title",
+    description: `projects.kingOfMath.description`,
     image: KingLogo,
-    tech: ["Ionic Framework","Angular","+500 Downloads"],
+    tech: ["Ionic Framework","Angular","projects.kingOfMath.downloads"],
     demo: "https://play.google.com/store/apps/details?id=com.kingssoftware.kingofmath&pcampaignid=web_share&pli=1",
     repo: "",
     video: "https://www.youtube.com/watch?v=R6BOlvQ1uR0",
-    details: `Meu maior propósito sempre foi estimular o raciocínio lógico e a resolução de problemas. O projeto começou no Ensino Médio com amigos, evoluindo de uma brincadeira para algo com grande potencial, utilizando tecnologias e APIs para melhorar o jogo. `
+    details: `projects.kingOfMath.details`
   },
   {
     id: "p3",
-    title: "Gerenciador de Itens Emprestado",
-    description: `Projeto mobile
-A ideia do aplicativo é permitir que usuários registrem objetos que podem ser emprestados, gerenciem contatos e acompanhem itens emprestados ou disponíveis`,
+    title: "projects.loanManager.title",
+    description: `projects.loanManager.description`,
     tech: ["Java","Android Studio","Gradle"],
     repo: "https://github.com/ricardo08jr/borrow-manager",
     video: "https://youtu.be/YzbFRiyJ7Wg",
-    details: `Este projeto começou como um projeto de estudo mais simples, mas foi evoluindo conforme eu aprendia novos conceitos de arquitetura e padrões de projeto.
-O principal objetivo do projeto é praticar desenvolvimento orientado a objetos e padrões de design em Java.`
+    details: `projects.loanManager.details`
   }
 ];
 

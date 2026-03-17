@@ -42,13 +42,13 @@ export default function App() {
         <ExperienceTimeline />
          <EducationSection
          id="certification"
-            title="Certificações"
+            title="cert.title"
             education={certification}
             defaultImage={DefaultImage}
           />
          <EducationSection
          id="education"
-        title="Formação Acadêmica"
+        title="education.title"
         education={education}
         defaultImage= {DefaultImage}
       />
