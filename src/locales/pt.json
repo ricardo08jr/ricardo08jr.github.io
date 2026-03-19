@@ -76,7 +76,7 @@
       "downloads": "+500 Downloads"
     },
     "loanManager": {
-      "title": "Gerenciador de Itens Emprestado",
+      "title": "Gerenciador de Itens Emprestados",
       "description": "A ideia do aplicativo é permitir que usuários registrem objetos que podem ser emprestados, gerenciem contatos e acompanhem itens emprestados ou disponíveis.",
       "details": "Este projeto começou como um projeto de estudo mais simples, mas foi evoluindo conforme eu aprendia novos conceitos de arquitetura e padrões de projeto. \n O principal objetivo do projeto é praticar desenvolvimento orientado a objetos e padrões de design em Java."
     }
